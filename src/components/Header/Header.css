@@ -23,18 +23,6 @@
   text-decoration: none;
   white-space: nowrap;
 
-  &::before {
-    content: "P";
-    display: grid;
-    width: 34px;
-    height: 34px;
-    place-items: center;
-    border-radius: 10px;
-    background: var(--accent-light);
-    color: var(--header);
-    font-size: 1rem;
-    letter-spacing: 0;
-  }
 }
 
 .site-nav {
