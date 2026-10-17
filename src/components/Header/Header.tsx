@@ -13,6 +13,6 @@ export default function Header() {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
-      </header>
+    </header>
   )
 }
