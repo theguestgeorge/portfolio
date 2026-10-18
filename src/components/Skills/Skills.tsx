@@ -30,11 +30,11 @@ const skills = [
 export default function Skills() {
   return (
 
-    <section className="skills">
+    <section className="skills-container">
         <div className="skills-header">
           <h2>About Me</h2>
         </div>
-        <ul className="skills-container">
+        <ul className="skills-grid">
             {skills.map((skill) => (
                 <li key={skill.name}>
                     <div className="itemContainer">
