@@ -7,7 +7,7 @@
   min-height: calc(100vh - 72px);
   min-height: calc(100dvh - 72px);
   padding: clamp(2rem, 7vw, 6rem);
-  background-image: url(../assets/hero.png);
+  background-image: url(../../assets/hero.png);
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
