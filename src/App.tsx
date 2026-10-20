@@ -18,7 +18,7 @@ function App() {
       </section>
 
       <body>
-        <section id = "about">
+        <section id="about">
           <About />
         </section>
         <section id = "skills">
