@@ -29,21 +29,23 @@ const skills = [
 
 export default function Skills() {
   return (
-
-    <section className="skills-container">
+    <section className="skills-section" aria-labelledby="skills-title">
+      <div className="skills-container">
         <div className="skills-header">
-          <h2>Skills</h2>
+          <p className="skills-eyebrow">What I work with</p>
+          <h2 id="skills-title">Skills</h2>
         </div>
         <ul className="skills-grid">
-            {skills.map((skill) => (
-                <li key={skill.name}>
-                    <div className="itemContainer">
-                        <img src={skill.image} alt={skill.name} />
-                        <p>{skill.name}</p>
-                    </div>
-                </li>
-            ))}
+          {skills.map((skill) => (
+            <li key={skill.name}>
+              <div className="itemContainer">
+                <img src={skill.image} alt="" />
+                <p>{skill.name}</p>
+              </div>
+            </li>
+          ))}
         </ul>
-      </section>
+      </div>
+    </section>
   )
 }
