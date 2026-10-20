@@ -32,7 +32,7 @@ export default function Skills() {
 
     <section className="skills-container">
         <div className="skills-header">
-          <h2>About Me</h2>
+          <h2>Skills</h2>
         </div>
         <ul className="skills-grid">
             {skills.map((skill) => (
