@@ -1,5 +1,5 @@
 import './Projects.css'
-import sonarRepsPreview from '../../assets/projects/sonar-reps-preview.svg'
+import sonarRepsPreview from '../../assets/projects/sonar-reps-preview.png'
 
 type Project = {
   name: string
@@ -7,6 +7,7 @@ type Project = {
   image: string
   imageAlt: string
   bulletPoints: string[]
+  githubLink: string
 }
 
 const projects: Project[] = [
@@ -15,21 +16,24 @@ const projects: Project[] = [
     technologies: ['Swift', 'Python'],
     image: sonarRepsPreview,
     imageAlt: 'Abstract preview graphic for Sonar Reps',
-    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"]
+    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"],
+    githubLink: "https://github.com/theguestgeorge/sonar-reps"
   },
   {
     name: 'AntiChess solver',
     technologies: ['Swift'],
     image: sonarRepsPreview,
     imageAlt: 'Abstract preview graphic for Sonar Reps',
-    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"]
+    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"],
+    githubLink: "https://github.com/theguestgeorge/sonar-reps"
   },
   {
     name: 'Sonar Reps',
     technologies: ['Swift'],
     image: sonarRepsPreview,
     imageAlt: 'Abstract preview graphic for Sonar Reps',
-    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"]    
+    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"],
+    githubLink: "https://github.com/theguestgeorge/sonar-reps"   
   }
 ]
 
@@ -55,6 +59,7 @@ function ProjectCard({ project }: { project: Project }) {
                 <li key={bulletPoint}>{bulletPoint}</li>
             ))}
         </ul>
+        <a href={project.githubLink}>Repo</a>
       </div>
     </article>
   )
