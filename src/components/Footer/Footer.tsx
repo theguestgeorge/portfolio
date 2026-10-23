@@ -7,13 +7,13 @@ const contacts = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/your-profile",
+    href: "https://www.linkedin.com/in/george-e-guest",
     icon: "linkedin-icon",
     target: "_blank",
   },
   {
     name: "Email",
-    href: "mailto:your.email@example.com",
+    href: "george.guest@outlook.com",
     icon: "email-icon",
   },
 ];
