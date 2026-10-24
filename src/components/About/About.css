@@ -60,8 +60,42 @@
   outline-offset: 4px;
 }
 
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--accent-light);
+  border-radius: 0.5rem;
+  background: var(--accent-light);
+  color: var(--header);
+  font-weight: 700;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.cv-download:hover {
+  transform: translateY(-2px);
+  border-color: var(--text-h);
+  background: var(--text-h);
+}
+
+.cv-download:focus-visible {
+  outline: 3px solid var(--text-h);
+  outline-offset: 4px;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .about-description a {
+  .about-description a,
+  .cv-download {
     transition: none;
+  }
+
+  .cv-download:hover {
+    transform: none;
   }
 }

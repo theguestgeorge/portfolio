@@ -1,4 +1,5 @@
 import './About.css'
+import cvFile from '../../assets/cv/George_Ernest_Guest_CV.pdf'
 
 export default function About() {
   return (
@@ -13,6 +14,14 @@ export default function About() {
           full-stack development. I enjoy solving problems through code and
           look forward to learning alongside other programmers.
         </p>
+        <a
+          className="cv-download"
+          href={cvFile}
+          download="George_Ernest_Guest_CV.pdf"
+          aria-label="Download my CV as a PDF"
+        >
+          Download my CV
+        </a>
       </div>
     </section>
   )
