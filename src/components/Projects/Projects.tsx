@@ -28,11 +28,11 @@ const projects: Project[] = [
     githubLink: "https://github.com/theguestgeorge/sonar-reps"
   },
   {
-    name: 'Sonar Reps',
-    technologies: ['Swift'],
+    name: 'ASCII Webcam',
+    technologies: ['Python'],
     image: sonarRepsPreview,
     imageAlt: 'Abstract preview graphic for Sonar Reps',
-    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"],
+    bulletPoints: ["Completely built with: blah blah ", "Runs in the terminal", "Detects both color and brightness"],
     githubLink: "https://github.com/theguestgeorge/sonar-reps"   
   }
 ]
