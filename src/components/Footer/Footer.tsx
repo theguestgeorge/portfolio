@@ -1,3 +1,4 @@
+import './Footer.css'
 
 import emailIcon from "../../assets/contacts/email-icon.png";
 import githubIcon from "../../assets/contacts/github-icon.png";
@@ -25,7 +26,8 @@ const contacts = [
 export default function Footer() {
   return (
     <footer>
-      <ul className="skills-grid">
+      <h2>Get in touch</h2>
+      <ul className="contacts-grid">
         {contacts.map((contact) => (
           <li key={contact.name}>
             <a
