@@ -39,7 +39,7 @@ export default function Skills() {
           {skills.map((skill) => (
             <li key={skill.name}>
               <div className="itemContainer">
-                <img src={skill.image} alt="" />
+                <img src={skill.image} alt={skill.name}  />
                 <p>{skill.name}</p>
               </div>
             </li>

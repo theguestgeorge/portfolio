@@ -1,20 +1,24 @@
+
+import emailIcon from "../../assets/contacts/email-icon.png";
+import githubIcon from "../../assets/contacts/github-icon.png";
+import linkedInIcon from "../../assets/contacts/linkedin-icon.jpg";
+
 const contacts = [
   {
     name: "GitHub",
     href: "https://github.com/your-username",
-    icon: "github-icon",
-    target: "_blank",
+    icon: githubIcon,
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/george-e-guest",
-    icon: "linkedin-icon",
-    target: "_blank",
+    icon: linkedInIcon,
+
   },
   {
     name: "Email",
     href: "george.guest@outlook.com",
-    icon: "email-icon",
+    icon: emailIcon,
   },
 ];
 
@@ -27,12 +31,8 @@ export default function Footer() {
             <a
               className="itemContainer"
               href={contact.href}
-              target={contact.target}
-              rel={contact.target ? "noreferrer" : undefined}
             >
-              <svg className="icon" aria-hidden="true">
-                <use href={`/icons.svg#${contact.icon}`} />
-              </svg>
+              <img className="icon" aria-hidden="true" src={contact.icon} />
               <p>{contact.name}</p>
             </a>
           </li>
