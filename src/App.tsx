@@ -27,7 +27,6 @@ function App() {
           <Skills />
         </section>
         <Projects />
-        <a href="https://arupmandal.github.io/">inspiration</a>
       </body>
 
 
