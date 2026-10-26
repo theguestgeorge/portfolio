@@ -7,7 +7,7 @@ import linkedInIcon from "../../assets/contacts/linkedin-icon.jpg";
 const contacts = [
   {
     name: "GitHub",
-    href: "https://github.com/TheGregLloyd",
+    href: "https://github.com/theguestgeorge",
     icon: githubIcon,
     external: true,
   },
