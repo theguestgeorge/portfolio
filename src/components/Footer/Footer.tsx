@@ -19,7 +19,7 @@ const contacts = [
   },
   {
     name: "Email",
-    href: "mailto:george.guest@outlook.com",
+    href: "mailto:george.e.guest@gmail.com",
     icon: emailIcon,
     external: false,
   },
