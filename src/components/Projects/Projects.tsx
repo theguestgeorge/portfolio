@@ -1,5 +1,7 @@
 import './Projects.css'
 import sonarRepsPreview from '../../assets/projects/sonar-reps-preview.png'
+import antichessPreview from '../../assets/projects/antichess-preview.png'
+import asciiWebcamPreview from '../../assets/projects/ascii-webcam-preview.png'
 
 type Project = {
   name: string
@@ -13,28 +15,40 @@ type Project = {
 const projects: Project[] = [
   {
     name: 'Sonar Reps',
-    technologies: ['Swift', 'Python'],
+    technologies: ['Swift', 'SwiftUI', 'Python', 'NumPy', 'SciPy'],
     image: sonarRepsPreview,
-    imageAlt: 'Abstract preview graphic for Sonar Reps',
-    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"],
-    githubLink: "https://github.com/theguestgeorge/sonar-reps"
+    imageAlt: 'Sonar Reps app screens showing a counted rep, a refused half rep and a phone-moved warning',
+    bulletPoints: [
+      'Counts push-ups using the iPhone speaker and mic as sonar, with no camera',
+      'Trained rep judge counted 39 of 40 full push-ups and refused all 15 half reps',
+      'Placed 2nd at the QMUL AI Hackathon',
+    ],
+    githubLink: 'https://github.com/theguestgeorge/sonar-reps',
   },
   {
-    name: 'AntiChess solver',
-    technologies: ['Swift'],
-    image: sonarRepsPreview,
-    imageAlt: 'Abstract preview graphic for Sonar Reps',
-    bulletPoints: ["Completely built with: blah blah ", "Good looking UI", "Reason behind 2nd place finish at Queen Mary Univeristy hackathon"],
-    githubLink: "https://github.com/theguestgeorge/sonar-reps"
+    name: 'AntiChess Solver',
+    technologies: ['Python', 'python-chess', 'HTML', 'CSS', 'JavaScript'],
+    image: antichessPreview,
+    imageAlt: 'Anti-chess board in the browser interface, a few moves into a game',
+    bulletPoints: [
+      'Plays anti-chess, where captures are forced and losing every piece wins',
+      'Engine uses alpha-beta search with iterative deepening and move ordering',
+      'Browser interface with time controls and online play against friends',
+    ],
+    githubLink: 'https://github.com/theguestgeorge/anitchess-solver',
   },
   {
     name: 'ASCII Webcam',
-    technologies: ['Python'],
-    image: sonarRepsPreview,
-    imageAlt: 'Abstract preview graphic for Sonar Reps',
-    bulletPoints: ["Completely built with: blah blah ", "Runs in the terminal", "Detects both color and brightness"],
-    githubLink: "https://github.com/theguestgeorge/sonar-reps"   
-  }
+    technologies: ['Python', 'OpenCV'],
+    image: asciiWebcamPreview,
+    imageAlt: 'Live webcam feed rendered as ASCII characters in the terminal',
+    bulletPoints: [
+      'Streams your webcam into the terminal as live ASCII art',
+      'Maps brightness to characters and colour to 24-bit ANSI codes',
+      'Scales to the terminal width at a capped frame rate',
+    ],
+    githubLink: 'https://github.com/theguestgeorge/ASCIIWebcam',
+  },
 ]
 
 function ProjectCard({ project }: { project: Project }) {
@@ -45,21 +59,30 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="project-details">
         <h3>{project.name}</h3>
-        <p className="project-technologies">
-          Technologies Used:{' '}
-          {project.technologies.map((technology, index) => (
-            <span key={technology}>
-              <span className="project-technology">{technology}</span>
-              {index < project.technologies.length - 1 ? ', ' : ''}
-            </span>
+        <ul
+          className="project-technologies"
+          aria-label={`Technologies used in ${project.name}`}
+        >
+          {project.technologies.map((technology) => (
+            <li key={technology} className="project-technology">
+              {technology}
+            </li>
           ))}
-        </p>
-        <ul>
-            {project.bulletPoints.map((bulletPoint) => (
-                <li key={bulletPoint}>{bulletPoint}</li>
-            ))}
         </ul>
-        <a href={project.githubLink}>Repo</a>
+        <ul className="project-points">
+          {project.bulletPoints.map((bulletPoint) => (
+            <li key={bulletPoint}>{bulletPoint}</li>
+          ))}
+        </ul>
+        <a
+          className="project-link"
+          href={project.githubLink}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`View ${project.name} on GitHub (opens in a new tab)`}
+        >
+          View on GitHub
+        </a>
       </div>
     </article>
   )
@@ -77,8 +100,8 @@ export default function Projects() {
         <h2 id="projects-title">Projects</h2>
 
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <ProjectCard key={`${project.name}-${index}`} project={project} />
+          {projects.map((project) => (
+            <ProjectCard key={project.name} project={project} />
           ))}
         </div>
       </div>
